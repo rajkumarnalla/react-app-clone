@@ -1,0 +1,42 @@
+{
+  "name": "react-app-clone",
+  "version": "1.0.0",
+  "description": "sample application built using react",
+  "main": "app.js",
+  "dependencies": {
+    "D": "^1.0.0",
+    "font-awesome": "^4.7.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajkumarnalla/react-app-clone.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajkumarnalla/react-app-clone/issues"
+  },
+  "homepage": "https://github.com/rajkumarnalla/react-app-clone#readme"
+}

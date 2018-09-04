@@ -1,0 +1,28 @@
+.active-nav {
+    background: #fff;
+    color: #292961;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 4px 2px;
+    padding: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    span {
+        color: #292961;
+    }
+}
+.active-nav:hover {
+    background: #fff;
+}
+.nav-item {
+    color: #d1d1f0;
+    font-size: 12px;
+    margin: 4px 2px;
+    padding: 9px 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-item:hover {
+    background: #4c4b7f;
+    border-radius: 4px;
+}
