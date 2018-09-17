@@ -1,9 +1,10 @@
 import React from 'react';
 
-import NavItem from '../nav-item';
+import NavItem from './nav-item';
+import { Link } from 'react-router-dom';
 
 import './header.scss'
-import HeaderSearchBar from '../header-search-bar';
+import HeaderSearchBar from './header-search-bar';
 
 const tabs = ["Projects", "Groups", "Activity", "Milestones", "Snippets"]
 

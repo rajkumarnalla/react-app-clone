@@ -1,0 +1,46 @@
+.dashboard_container {
+    padding: 10px;
+    max-width: 1280px;
+    width: 100%; 
+    margin: 0 auto;
+    p.title {
+        margin: 0;
+        padding: 8px 0;
+        color: #2e2e2e;
+        font-size: 12px;
+        font-weight: 'bold';
+        border-bottom: 1px solid #e5e5e5;
+    }
+    div {
+        .side-span {
+            display: flex;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 11px 0;
+            span {
+                display: inline-block;
+                border: 1px solid #dfdfdf;
+                border-radius: 2px;
+                margin-right: 10px;
+                input {
+                    outline: none;
+                    line-Height: 20px;
+                    color: #2e2e2e;
+                    font-size: 1rem;
+                    width: 240px;
+                    padding: 6px 10px;
+                    border: none;
+                    border-radius: 2px;
+                }
+            }
+            button {
+                border: none;
+                background: #64ac56;
+                border-radius: 2px;
+                font-weight: bold;
+                color: white;
+            }
+        }
+    }
+}

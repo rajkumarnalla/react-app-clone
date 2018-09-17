@@ -2,12 +2,13 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
-  "entry": "./app.js",
+  "entry": "./src/main.js",
   "output": {
     "path": path.join(__dirname, "dist"),
-    "filename": "bundle.js"
+    "filename": "bundle.js",
+    "publicPath": "/"
   },
-  "module": {  
+  "module": {
     "rules": [
       {
          "test": /\.js$/,
@@ -37,6 +38,7 @@ module.exports = {
   "devServer": {
     "publicPath": "/dist",
     "inline": true,
-    "port": 9000
+    "port": 9000,
+    "historyApiFallback": true
   }
 }

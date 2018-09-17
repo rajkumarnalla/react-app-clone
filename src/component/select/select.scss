@@ -1,0 +1,41 @@
+.select {
+    cursor: pointer;
+    position: relative;
+    height: 20px;
+    .select-input {
+        display: inline-block;
+        width: 160px;
+        height: 20px;
+        border: 1px solid grey;
+        padding: 6px;
+    }
+    .select-items {
+        position: absolute;
+        overflow-y: auto;
+        top: 0;
+        right: 10px;
+        height: 300px;
+        width: 220px;
+        list-style: none;
+        display: none;
+        padding: 0px;
+        margin-top: 38px;
+        border: 1px solid #dfdfdf;
+        background: white;
+        z-index: 2;
+    }
+    .select-items > li:first-child {
+        color: #8a8585;
+        font-size: 14px;
+        padding: 18px 8px;
+        padding-bottom: 5px;
+    }
+    .select-items > li:nth-child(6), .select-items > li:nth-child(9) {
+        border-bottom: 1px solid #dfdfdf;
+    }
+    .select-items > li{
+        font-size: 16px;
+        padding: 10px 24px;
+        position: relative;
+    }
+}
