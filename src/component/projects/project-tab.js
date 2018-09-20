@@ -17,6 +17,16 @@ const tabs = [{
     tabIndex: 3
 }]
 
+const groups = [{
+    name: 'Your Groups',
+    path: '/groups/personal',
+    tabIndex: 1
+}, {
+    name: 'Explore public goups',
+    path: '/groups/all',
+    tabIndex: 2
+}]
+
 export default class ProjectTab extends Component {
     constructor() {
         super();
@@ -28,15 +38,15 @@ export default class ProjectTab extends Component {
     render() {
         return (
             <div>
-                <p className="title">Projects</p>
+                <p className="title">{this.props.title}</p>
                 <div style={{position: 'relative'}}>
-                    <Tab pathname={this.props.pathname} history={this.props.history} items={tabs}/>
+                    <Tab pathname={this.props.pathname} history={this.props.history} items={this.props.groupTab ? groups : tabs}/>
                     <div className="side-span">
                         <span>
                             <input placeholder="Filter by name..." type="text"></input>
                         </span>
                         <Select/>
-                        <button>New Project</button>
+                        {this.props.selection ? <button>New Project</button> : null}
                     </div>
                 </div>
             </div>

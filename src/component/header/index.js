@@ -34,11 +34,18 @@ export default class Header extends React.Component {
       activeIndex: 0
     }
     this.switchTab = this.switchTab.bind(this);
+    this.toggleDialog = this.toggleDialog.bind(this);
   }
   switchTab(index, id) {
     this.setState({
+      showGroupFilterDialog: index == 1 ? true : false,
       activeIndex: index,
       activeIconBtn: id
+    })
+  }
+  toggleDialog(key) {
+    this.setState({
+      [key]: !this.state[key]
     })
   }
   render() {
@@ -46,7 +53,8 @@ export default class Header extends React.Component {
       <header className="header">
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', float: 'left', height: 'inherit'}}>
           {tabs.map((el, index) => 
-            <NavItem key={index} switchTab={this.switchTab} activeIndex={this.state.activeIndex} item={el} index={index}/>
+            <NavItem key={index} toggleDialog={this.toggleDialog} showGroupFilterDialog={this.state.showGroupFilterDialog} 
+              switchTab={this.switchTab} activeIndex={this.state.activeIndex} item={el} index={index}/>
           )}
         </div>
         <div style={{float: 'right', color: '#d1d1f0', height: 'inherit'}}>

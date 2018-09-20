@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import ProjectList from '../project-list';
+import ItemsList from '../items-list';
 import ProjectTab from './project-tab';
 import Tab from '../tab';
 import './projects.scss'
@@ -37,7 +37,7 @@ const YourProjects = (props) => {
         <div>
             <Tab history={props.history} pathname={'/dashboard/projects/all'} items={[{name: 'All', path: '/dashboard/projects/all', tabIndex: 1}, {name: 'Personal', path: '/dashboard/projects/all?personal=true', tabIndex: 2}]} 
                 style={{padding: '10px', paddingBottom: '11px'}}/>
-            <ProjectList data={yourProjects}/>
+            <ItemsList project data={yourProjects}/>
         </div>
     );
 }
@@ -57,7 +57,7 @@ export default class Projects extends Component {
     render() {
         return (
             <div className="dashboard_container">
-                <ProjectTab history={this.props.history} routes={routes} pathname={this.props.location.pathname}/>
+                <ProjectTab title="Projects" selection history={this.props.history} routes={routes} pathname={this.props.location.pathname}/>
                 <Switch>
                     {Object.keys(routes).map((key, index) => (
                         <Route key={index} exact path={key} component={routes[key].component}/>)

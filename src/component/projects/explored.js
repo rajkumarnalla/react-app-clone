@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ProjectList from '../project-list';
+import ItemsList from '../items-list';
 import Tab from '../tab';
 import ProjectTab from './project-tab';
 
@@ -55,7 +55,7 @@ export default class Explored extends Component {
                         {name: 'Most stars', path: '/explored/projects/starred', tabIndex: 2}, 
                         {name: 'All', path: '/explored/projects/all', tabIndex: 3}]} 
                     style={{padding: '10px', paddingBottom: '11px'}}/>
-                <ProjectList data={projects}/>
+                <ItemsList project data={projects}/>
             </div>
         )
     }

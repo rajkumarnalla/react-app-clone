@@ -4,9 +4,10 @@
     list-style-type: none;
     .list-item {
         display: flex;
+        align-items: center;
         padding: 10px 0;
         border-bottom: 1px solid #eee;
-        span.avatar {
+        span.project-avatar, span.group-avatar {
             border-radius: 50%;
             background: #ffebee;
             width: 38px;
@@ -15,6 +16,12 @@
             line-height: 38px;
             font-size: 16px;
             margin-right: 10px;
+        }
+        span.group-avatar {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
         }
         div {
             display: flex;
